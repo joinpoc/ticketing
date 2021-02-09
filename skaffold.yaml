@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: stephengrider/auth
+    - image: petchi/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: stephengrider/client
+    - image: petchi/client
       context: client
       docker:
         dockerfile: Dockerfile
